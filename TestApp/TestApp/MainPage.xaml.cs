@@ -10,7 +10,7 @@ namespace TestApp
 {
     public partial class MainPage : ContentPage
     {
-
+        //test
         public int lifeTotal = 40;
         public int storm = 0;
         public int colourless = 0;
