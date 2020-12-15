@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.MainPage">
+
+
+    <StackLayout>
+
+        <Label Text="Life Total" HorizontalOptions="Center"/>
+
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_Life_Remove" HorizontalOptions="End"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding LifeTotal}" HorizontalOptions="Center" FontSize="100"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_Life_Add" HorizontalOptions="Start"/>
+            </StackLayout>
+        </StackLayout>
+
+
+        <Label Text="Storm Count" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_Storm_Remove" HorizontalOptions="End"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding stormLabel}" HorizontalOptions="Center" FontSize="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_Storm_Add" HorizontalOptions="Start"/>
+            </StackLayout>
+        </StackLayout>
+
+        <Label Text="Mana" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_colourless_Remove" HorizontalOptions="End" BackgroundColor="Silver"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding colourlessLabel}" HorizontalOptions="Center" FontSize="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_colourless_Add" HorizontalOptions="Start" BackgroundColor="Silver"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!--<Label Text="Blue" HorizontalOptions="Center"/>-->
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_Blue_Remove" HorizontalOptions="End" BackgroundColor="Blue"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding blueLabel}" HorizontalOptions="Center" FontSize="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_Blue_Add" HorizontalOptions="Start" BackgroundColor="Blue"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!--<Label Text="Red" HorizontalOptions="Center"/>-->
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_Red_Remove" HorizontalOptions="End" BackgroundColor="Red"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding redLabel}" HorizontalOptions="Center" FontSize="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_Red_Add" HorizontalOptions="Start" BackgroundColor="Red"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!--<Label Text="Black" HorizontalOptions="Center"/>-->
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_Black_Remove" HorizontalOptions="End" BackgroundColor="Black"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding blackLabel}" HorizontalOptions="Center" FontSize="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_Black_Add" HorizontalOptions="Start" BackgroundColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!--<Label Text="Green" HorizontalOptions="Center"/>-->
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_Green_Remove" HorizontalOptions="End" BackgroundColor="Green"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding greenLabel}" HorizontalOptions="Center" FontSize="30" TextColor="Green"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_Green_Add" HorizontalOptions="Start" BackgroundColor="Green"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!--<Label Text="White" HorizontalOptions="Center"/>-->
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="-" Clicked="Button_White_Remove" HorizontalOptions="End" BackgroundColor="WhiteSmoke"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding whiteLabel}" HorizontalOptions="Center" FontSize="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="+" Clicked="Button_White_Add" HorizontalOptions="Start" BackgroundColor="WhiteSmoke"/>
+            </StackLayout>
+        </StackLayout>
+
+        
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="Reset Life" Clicked="Button_ResetLife" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="Reset Counts" Clicked="Button_Reset_Counts" HorizontalOptions="Start"/>
+            </StackLayout>
+        </StackLayout>
+
+
+
+
+    </StackLayout>
+
+
+</ContentPage>
