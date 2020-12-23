@@ -23,6 +23,7 @@ namespace TestApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            UIApplication.SharedApplication.IdleTimerDisabled = true;
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

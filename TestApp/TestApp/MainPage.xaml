@@ -2,146 +2,186 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestApp.MainPage">
+    
+    <Grid Margin="5, 5, 5, 5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+            <!--
+            Label
+            Life total line
+            Label
+            Commander Damage Line
+            Label
+            Mana
+            Label
+            Storm
+            Label
+            Buttons
+            -->
+            
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.20*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Life Total" HorizontalOptions="Center"/>
+        </Grid>
 
 
-    <StackLayout>
-
-        <Label Text="Life Total" HorizontalOptions="Center"/>
-
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_Life_Remove" HorizontalOptions="End"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding LifeTotal}" HorizontalOptions="Center" FontSize="100"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_Life_Add" HorizontalOptions="Start"/>
-            </StackLayout>
-        </StackLayout>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="0.60*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Text="-" Clicked="Button_Life_Remove" HorizontalOptions="Center" BackgroundColor="White" Grid.Column="0"/>
+            <Label Text="{Binding LifeTotal}" HorizontalOptions="Center" FontSize="100" HorizontalTextAlignment="Center"  Grid.Column="1"/>
+            <Button Text="+" Clicked="Button_Life_Add" HorizontalOptions="Center" BackgroundColor="White" Grid.Column="2"/>
+        </Grid>
 
 
-        <Label Text="Storm Count" HorizontalOptions="Center"/>
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_Storm_Remove" HorizontalOptions="End"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding stormLabel}" HorizontalOptions="Center" FontSize="30"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_Storm_Add" HorizontalOptions="Start"/>
-            </StackLayout>
-        </StackLayout>
-
-        <Label Text="Mana" HorizontalOptions="Center"/>
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_colourless_Remove" HorizontalOptions="End" BackgroundColor="Silver"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding colourlessLabel}" HorizontalOptions="Center" FontSize="30"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_colourless_Add" HorizontalOptions="Start" BackgroundColor="Silver"/>
-            </StackLayout>
-        </StackLayout>
-
-        <!--<Label Text="Blue" HorizontalOptions="Center"/>-->
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_Blue_Remove" HorizontalOptions="End" BackgroundColor="Blue"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding blueLabel}" HorizontalOptions="Center" FontSize="30"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_Blue_Add" HorizontalOptions="Start" BackgroundColor="Blue"/>
-            </StackLayout>
-        </StackLayout>
-
-        <!--<Label Text="Red" HorizontalOptions="Center"/>-->
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_Red_Remove" HorizontalOptions="End" BackgroundColor="Red"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding redLabel}" HorizontalOptions="Center" FontSize="30"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_Red_Add" HorizontalOptions="Start" BackgroundColor="Red"/>
-            </StackLayout>
-        </StackLayout>
-
-        <!--<Label Text="Black" HorizontalOptions="Center"/>-->
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_Black_Remove" HorizontalOptions="End" BackgroundColor="Black"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding blackLabel}" HorizontalOptions="Center" FontSize="30"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_Black_Add" HorizontalOptions="Start" BackgroundColor="Black"/>
-            </StackLayout>
-        </StackLayout>
-
-        <!--<Label Text="Green" HorizontalOptions="Center"/>-->
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_Green_Remove" HorizontalOptions="End" BackgroundColor="Green"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding greenLabel}" HorizontalOptions="Center" FontSize="30" TextColor="Green"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_Green_Add" HorizontalOptions="Start" BackgroundColor="Green"/>
-            </StackLayout>
-        </StackLayout>
-
-        <!--<Label Text="White" HorizontalOptions="Center"/>-->
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="-" Clicked="Button_White_Remove" HorizontalOptions="End" BackgroundColor="WhiteSmoke"/>
-
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Label Text="{Binding whiteLabel}" HorizontalOptions="Center" FontSize="30"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="+" Clicked="Button_White_Add" HorizontalOptions="Start" BackgroundColor="WhiteSmoke"/>
-            </StackLayout>
-        </StackLayout>
-
-        
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="Reset Life" Clicked="Button_ResetLife" HorizontalOptions="End"/>
-            </StackLayout>
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="Reset Counts" Clicked="Button_Reset_Counts" HorizontalOptions="Start"/>
-            </StackLayout>
-        </StackLayout>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.20*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Commander Damage" HorizontalOptions="Center"/>
+        </Grid>
 
 
+        <Grid Margin="0,0,0,0"  Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.10*" />
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.10*" />
+                <ColumnDefinition Width="0.10*" />
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.10*" />
+                <ColumnDefinition Width="0.10*" />
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.10*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Entry  Text="Left" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0" FontSize="Small"/>
+            <Button Text="-" Clicked="Button_CommanderCenter_Remove" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="40" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="{Binding commanderCenterLabel}" HorizontalOptions="Center" FontSize="30" WidthRequest="40" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+            <Button Text="+" Clicked="Button_CommanderCenter_Add" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="40" Grid.Column="2" Grid.Row="1"/>
+
+            <Entry Text="Center" HorizontalOptions="Center" Grid.Column="4" Grid.Row="0" FontSize="Small"/>
+            <Button Text="-" Clicked="Button_CommanderLeft_Remove" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="40" Grid.Column="3" Grid.Row="1"/>
+            <Label Text="{Binding commanderLeftLabel}" HorizontalOptions="Center" FontSize="30" WidthRequest="40" HorizontalTextAlignment="Center" Grid.Column="4" Grid.Row="1"/>
+            <Button Text="+" Clicked="Button_CommanderLeft_Add" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="40" Grid.Column="5" Grid.Row="1"/>
+
+            <Entry Text="Right" HorizontalOptions="Center" Grid.Column="7" Grid.Row="0" FontSize="Small"/>
+            <Button Text="-" Clicked="Button_CommanderRight_Remove" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="40" Grid.Column="6" Grid.Row="1"/>
+            <Label Text="{Binding commanderRightLabel}" HorizontalOptions="Center" FontSize="30" WidthRequest="40" HorizontalTextAlignment="Center" Grid.Column="7" Grid.Row="1"/>
+            <Button Text="+" Clicked="Button_CommanderRight_Add" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="40" Grid.Column="8" Grid.Row="1"/>
+        </Grid>
+
+        <Grid Margin="0,0,0,0"  Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="0.30*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="0.30*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Button Text="-" Clicked="Button_colourless_Remove" HorizontalOptions="Center" BackgroundColor="Silver" WidthRequest="70" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="{Binding colourlessLabel}" HorizontalOptions="Center" FontSize="30" WidthRequest="50" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+            <Button Text="+" Clicked="Button_colourless_Add" HorizontalOptions="Center" BackgroundColor="Silver" WidthRequest="70" Grid.Column="2" Grid.Row="0"/>
+
+            <Button Text="-" Clicked="Button_Blue_Remove" HorizontalOptions="Center" BackgroundColor="Blue" WidthRequest="70" Grid.Column="3" Grid.Row="0"/>
+            <Label Text="{Binding blueLabel}" HorizontalOptions="CenterAndExpand" FontSize="30" WidthRequest="50" HorizontalTextAlignment="Center" Grid.Column="4" Grid.Row="0"/>
+            <Button Text="+" Clicked="Button_Blue_Add" HorizontalOptions="Center" BackgroundColor="Blue" WidthRequest="70" Grid.Column="5" Grid.Row="0"/>
+            
+            
+            <Button Text="-" Clicked="Button_Red_Remove" HorizontalOptions="Center" BackgroundColor="Red" WidthRequest="70" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="{Binding redLabel}" HorizontalOptions="Center" FontSize="30" WidthRequest="50" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+            <Button Text="+" Clicked="Button_Red_Add" HorizontalOptions="Center" BackgroundColor="Red" WidthRequest="70" Grid.Column="2" Grid.Row="1"/>
+
+            <Button Text="-" Clicked="Button_Black_Remove" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="70" Grid.Column="3" Grid.Row="1"/>
+            <Label Text="{Binding blackLabel}" HorizontalOptions="Center" FontSize="30"  WidthRequest="50" HorizontalTextAlignment="Center" Grid.Column="4" Grid.Row="1"/>
+            <Button Text="+" Clicked="Button_Black_Add" HorizontalOptions="Center" BackgroundColor="Black" WidthRequest="70" Grid.Column="5" Grid.Row="1"/>
+            
+
+            <Button Text="-" Clicked="Button_Green_Remove" HorizontalOptions="Center" BackgroundColor="Green" WidthRequest="70" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="{Binding greenLabel}" HorizontalOptions="Center" FontSize="30" TextColor="Green" WidthRequest="50" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+            <Button Text="+" Clicked="Button_Green_Add" HorizontalOptions="Center" BackgroundColor="Green" WidthRequest="70" Grid.Column="2" Grid.Row="2"/>
+
+            <Button Text="-" Clicked="Button_White_Remove" HorizontalOptions="Center" BackgroundColor="WhiteSmoke" WidthRequest="70" Grid.Column="3" Grid.Row="2"/>
+            <Label Text="{Binding whiteLabel}" HorizontalOptions="Center" FontSize="30" WidthRequest="50" HorizontalTextAlignment="Center" Grid.Column="4" Grid.Row="2"/>
+            <Button Text="+" Clicked="Button_White_Add" HorizontalOptions="Center" BackgroundColor="WhiteSmoke" WidthRequest="70" Grid.Column="5" Grid.Row="2"/>
+        </Grid>
+
+        <Grid Margin="0,0,0,0"  Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.20*" />
+                <ColumnDefinition Width="0.30*" />
+                <ColumnDefinition Width="0.20*" />
+                <ColumnDefinition Width="0.20*" />
+                <ColumnDefinition Width="0.30*" />
+                <ColumnDefinition Width="0.20*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Button Text="-" Clicked="Button_Storm_Remove" HorizontalOptions="Center" BackgroundColor="black" Grid.Column="0"/>
+            <Label Text="{Binding stormLabel}" HorizontalOptions="Center" FontSize="30" HorizontalTextAlignment="Center" Grid.Column="1"/>
+            <Button Text="+" Clicked="Button_Storm_Add" HorizontalOptions="Center" BackgroundColor="Black" Grid.Column="2"/>
+
+            <!--<Button Text="-" Clicked="Button_Other_Remove" HorizontalOptions="Center" BackgroundColor="black" Grid.Column="3"/>
+            <Label Text="{Binding otherLabel}" HorizontalOptions="CenterAndExpand" FontSize="30" HorizontalTextAlignment="Center" Grid.Column="4"/>
+            <Button Text="+" Clicked="Button_Other_Add" HorizontalOptions="Center" BackgroundColor="Black" Grid.Column="5"/>-->
+
+        </Grid>
+            <Grid Margin="0,0,0,0"  Grid.Row="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
 
-    </StackLayout>
+                <Button Text="Reset Life" Clicked="Button_ResetLife" HorizontalOptions="End" Grid.Column="0"/>
 
-
+                <Button Text="Reset Counts" Clicked="Button_Reset_Counts" HorizontalOptions="Start" Grid.Column="1"/>
+         
+            </Grid>
+    </Grid>
 </ContentPage>
